@@ -1,0 +1,14 @@
+# IDE / tooling
+.trae/
+
+# conda-build artifacts
+conda-bld/
+
+# Python
+__pycache__/
+*.pyc
+
+# Build
+build/
+dist/
+*.egg-info/
