@@ -1,0 +1,27 @@
+# Version control & editor artifacts
+.git
+.gitignore
+.gitattributes
+
+# Documentation & metadata not needed inside the image
+*.md
+!environment-docker.yml
+Dockerfile
+.dockerignore
+LICENSE
+
+# OS / editor cruft
+.DS_Store
+*.swp
+*~
+__pycache__/
+*.pyc
+
+# Source-tree directories not needed in the image
+conda-recipe/
+testdata/
+tutorials/
+
+# Local build artifacts
+*.tar.gz
+*.log

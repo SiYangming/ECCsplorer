@@ -1,0 +1,51 @@
+name: eccsplorer
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.7.10
+  - numpy
+  - biopython
+  - scipy
+  - pip
+  - r-base
+  - r-ggplot2
+  - r-ggrepel
+  - r-gridextra
+  - r-dplyr
+  - blast
+  - segemehl>=0.3.4
+  - samtools>=1.9
+  - bedtools>=2.28.0
+  - trimmomatic
+  - seqtk
+  # RepeatExplorer2 推荐的第三方工具（参考 Installation_instructions.md）
+  - diamond
+  - last
+  - mafft
+  - imagemagick
+  - blast-legacy
+  # RepeatExplorer2 推荐的 R 库
+  - r-igraph
+  - r-data.tree
+  - r-stringr
+  - r-r2html
+  - r-hwriter
+  - r-dt
+  - r-scales
+  - r-plotrix
+  - r-png
+  - r-plyr
+  - r-optparse
+  - r-dbi
+  - r-rsqlite
+  - r-gridbase
+  # Bioconductor
+  - bioconductor-biostrings
+  # Rserve（从 Dockerfile 迁移过来统一管理）
+  - r-rserve
+# NOTE: The following dependencies are NOT available on conda channels
+# and are installed separately in the Dockerfile:
+#   - pyRserve  -> installed via `pip install pyRserve`
+#   - RepeatExplorer2 (seqclust) -> installed from source tarball

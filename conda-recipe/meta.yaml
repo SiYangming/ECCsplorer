@@ -1,0 +1,39 @@
+{% set name = "eccsplorer_slim" %}
+{% set version = "1.0.0" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  path: ../bin
+
+build:
+  number: 1
+  noarch: python
+
+requirements:
+  run:
+    - python>=3.9
+    - numpy
+    - scipy
+    - biopython
+    - r-base>=4.0
+    - r-ggplot2
+    - r-ggrepel
+    - r-gridextra
+    - r-dplyr
+
+test:
+  imports:
+    - numpy
+    - scipy
+    - Bio
+  commands:
+    - python -c "import numpy, scipy; from Bio import SeqIO; print('ECCsplorer_slim OK')"
+    - Rscript -e "library(ggplot2); print('OK')"
+
+about:
+  home: https://quay.io/bioinfortools/eccsplorer_slim
+  license: GPL-3.0
+  summary: Minimal ECCsplorer analysis scripts (no external bioinfo tools)
