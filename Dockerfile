@@ -2,7 +2,7 @@ FROM docker.1ms.run/library/python:3.9-slim
 
 LABEL maintainer="siyangming"
 LABEL software="eccsplorer_slim"
-LABEL software.version="1.0.0"
+LABEL software.version="1.0.1"
 LABEL description="Minimal ECCsplorer analysis scripts (Python+R only, no bioinformatics tools)"
 LABEL org.opencontainers.image.source="https://github.com/crimBubble/ECCsplorer"
 
